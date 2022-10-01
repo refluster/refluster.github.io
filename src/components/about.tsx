@@ -2,14 +2,13 @@ import React from 'react';
 import Contents from './contents';
 import NavBar from './navbar';
 
-const Home: React.FC = () => {
+const About: React.FC = () => {
     return (
         <div className="home">
-            <NavBar />
-            home
+            about
             <Contents />
         </div>
     )
 };
 
-export default Home;
+export default About;
