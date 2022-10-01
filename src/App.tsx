@@ -3,11 +3,12 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/about';
 import Home from './components/home';
+import NavBar from './components/navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello React Router v6</h1>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
