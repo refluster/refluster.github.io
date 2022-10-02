@@ -23,10 +23,18 @@ function Name() {
                 Koh Uehara
             </Grid>
             <Grid item xs={6}>
-                <img src={`${Selfie}?w=320&h=320&fit=crop&auto=format`} />
+                <Box sx={faceStyle} />
             </Grid>
         </Grid>
     )
+}
+
+const faceStyle = {
+    backgroundImage: `url(${Selfie})`,
+    height: 320,
+    width: 320,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
 }
 
 export default Home;
