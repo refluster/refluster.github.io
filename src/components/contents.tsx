@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, ImageList, ImageListItem, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { Projects } from '../projects/index';
 
@@ -28,13 +28,18 @@ const Project = () => {
                     </Typography>
                 </Grid>
             </Grid>
+            <ImageList sx={{  }} cols={3} rowHeight={164}>
+                {project.images.map((item) => (
+                    <ImageListItem key={item}>
+                    </ImageListItem>
+                ))}
+            </ImageList>
             <Box sx={{
                 height: 480,
-                backgroundColor: 'primary.dark',
                 display: 'flex',
             }}>
                 {project.images.map(image => {
-                    return <img src={image} />
+                    return <img src={image} width="33%" />
                 })
             }
             </Box>

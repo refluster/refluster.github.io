@@ -1,5 +1,6 @@
 import lumixGh5 from './lumix/lumix-gh5.png';
 import lumixA100 from './lumix/lumix-a100.png';
+import lumixGM from './lumix/lumix-gm.jpeg';
 
 export const Projects = [
     {
@@ -14,6 +15,7 @@ export const Projects = [
         images: [
             lumixGh5,
             lumixA100,
+            lumixGM,
         ]
     }, {
         title: "OND'U",

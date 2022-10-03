@@ -17,7 +17,7 @@ const Home: React.FC = () => {
 function Name() {
     return (
         <Box sx={{
-            backgroundColor: 'primary.dark',
+            //backgroundColor: 'primary.dark',
             py: 32,
             px: 8,
             typography: {
