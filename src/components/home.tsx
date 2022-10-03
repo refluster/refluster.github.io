@@ -17,9 +17,8 @@ const Home: React.FC = () => {
 function Name() {
     return (
         <Box sx={{
-            //backgroundColor: 'primary.dark',
-            height: 420,
-            py: 22,
+            backgroundColor: 'primary.dark',
+            py: 32,
             px: 8,
             typography: {
                 h2: {
@@ -33,23 +32,12 @@ function Name() {
             <Typography variant="h3">
                 based in bay area.
             </Typography>
+            <Box sx={{
+
+            }}>
+                Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
+            </Box>
         </Box>
-    )
-}
-
-function Name2() {
-    return (
-        <Grid container>
-            <Grid item xs={6}>
-                <Box sx={{ backgroundColor: 'primary.dark', height: 420 }}>
-
-                </Box>
-                Koh Uehara
-            </Grid>
-            <Grid item xs={6}>
-                <Box sx={faceStyle} />
-            </Grid>
-        </Grid>
     )
 }
 
