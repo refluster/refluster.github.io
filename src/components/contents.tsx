@@ -1,7 +1,9 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React, { useState } from 'react';
+import { Projects } from '../projects/index';
 
-const Uttzs = () => {
+const Project = () => {
+    const project = Projects[0];
     return (
         <Box>
             <Grid container rowSpacing={2} sx={{
@@ -11,29 +13,30 @@ const Uttzs = () => {
                 <Grid xs={6}>
                     <Typography variant="h2" sx={{
                     }}>
-                        Uttzs
+                        {project.title}
                     </Typography>
                     <Typography variant="h4" sx={{
                         pr: 4,
                     }}>
-                        Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
+                        {project.subtitle}
                     </Typography>
                 </Grid>
                 <Grid xs={6} sx={{
                 }}>
                     <Typography variant='h5'>
-                        Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
-                        Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
-                        Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
-                        Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
+                        {project.description}
                     </Typography>
                 </Grid>
             </Grid>
             <Box sx={{
                 height: 480,
                 backgroundColor: 'primary.dark',
+                display: 'flex',
             }}>
-                
+                {project.images.map(image => {
+                    return <img src={image} />
+                })
+            }
             </Box>
         </Box>
     )
@@ -72,7 +75,7 @@ const Ondu = () => {
 
 const Contents: React.FC = () => {
     return (
-        <Uttzs />
+        <Project />
     )
 };
 

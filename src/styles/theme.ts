@@ -2,13 +2,13 @@ import { createTheme } from '@mui/material';
 
 export const themeOptions = {
     palette: {
-      type: 'dark',
-      primary: {
-        main: '#fafafa',
+        type: 'dark',
+        primary: {
+            main: '#fafafa',
         },
-      secondary: {
-        main: '#f50057',
-      },
+        secondary: {
+            main: '#f50057',
+        },
     },
     spacing: 8,
 };
