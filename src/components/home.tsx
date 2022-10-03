@@ -17,12 +17,22 @@ const Home: React.FC = () => {
 function Name() {
     return (
         <Box sx={{
-            backgroundColor: 'primary.dark',
+            //backgroundColor: 'primary.dark',
             height: 420,
+            py: 22,
+            px: 8,
+            typography: {
+                h2: {
+                    fontWeight: 400,
+                },
+            },
         }}>
-            <Typography variant="h1">
-                Software Architect
-            </Typography>;
+            <Typography variant="h2">
+                Software architect
+            </Typography>
+            <Typography variant="h3">
+                based in bay area.
+            </Typography>
         </Box>
     )
 }
