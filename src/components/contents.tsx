@@ -10,7 +10,7 @@ const Project = () => {
                 px: 16,
                 py: 4
             }}>
-                <Grid xs={6}>
+                <Grid sm={6}>
                     <Typography variant="h2" sx={{
                     }}>
                         {project.title}
@@ -21,7 +21,7 @@ const Project = () => {
                         {project.subtitle}
                     </Typography>
                 </Grid>
-                <Grid xs={6} sx={{
+                <Grid sm={6} sx={{
                 }}>
                     <Typography variant='h5'>
                         {project.description}
