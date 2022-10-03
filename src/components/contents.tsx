@@ -28,21 +28,16 @@ const Project = () => {
                     </Typography>
                 </Grid>
             </Grid>
-            <ImageList sx={{  }} cols={3} rowHeight={164}>
+            <ImageList sx={{  }} cols={3}>
                 {project.images.map((item) => (
                     <ImageListItem key={item}>
+                        <img
+                            src={`${item}`}
+                            loading="lazy"
+                            />
                     </ImageListItem>
                 ))}
             </ImageList>
-            <Box sx={{
-                height: 480,
-                display: 'flex',
-            }}>
-                {project.images.map(image => {
-                    return <img src={image} width="33%" />
-                })
-            }
-            </Box>
         </Box>
     )
 }
