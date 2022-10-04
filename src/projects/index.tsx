@@ -2,7 +2,16 @@ import lumixGh5 from './lumix/lumix-gh5.png';
 import lumixA100 from './lumix/lumix-a100.png';
 import lumixGM from './lumix/lumix-gm.jpeg';
 
-export const Projects = [
+export type Project = {
+    title: string,
+    subtitle: string,
+    description: string,
+    url: string,
+    articles: string[],
+    images: string[],
+};
+
+export const Projects: Project[] = [
     {
         title: 'Lumix',
         subtitle: 'Digital still camera',

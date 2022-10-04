@@ -1,9 +1,8 @@
 import { Box, Grid, ImageList, ImageListItem, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { Projects } from '../projects/index';
+import { Projects, Project } from '../projects/index';
 
-const Project = () => {
-    const project = Projects[0];
+function ProjectView({project}: {project: Project}) {
     return (
         <Box>
             <Grid container rowSpacing={2} sx={{
@@ -75,7 +74,7 @@ const Ondu = () => {
 
 const Contents: React.FC = () => {
     return (
-        <Project />
+        <ProjectView project={Projects[0]} />
     )
 };
 

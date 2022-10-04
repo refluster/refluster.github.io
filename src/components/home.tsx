@@ -32,11 +32,11 @@ function Name() {
             <Typography variant="h3">
                 based in bay area.
             </Typography>
-            <Box sx={{
-
+            <Typography sx={{
+                py: 4
             }}>
                 Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
-            </Box>
+            </Typography>
         </Box>
     )
 }
