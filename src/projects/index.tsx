@@ -2,6 +2,8 @@ import lumixGh5 from './lumix/lumix-gh5.png';
 import lumixA100 from './lumix/lumix-a100.png';
 import lumixGM from './lumix/lumix-gm.jpeg';
 
+import onduApp from './ondu/ondu_app.png';
+
 export type Project = {
     title: string,
     subtitle: string,
@@ -34,7 +36,7 @@ export const Projects: Project[] = [
         articles: [
         ],
         images: [
-
+            onduApp,
         ]
-    }
+    },
 ];
