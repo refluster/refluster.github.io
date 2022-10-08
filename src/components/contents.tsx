@@ -7,7 +7,9 @@ function ProjectView({project}: {project: Project}) {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <Box>
+        <Box sx={{
+            py: 10,
+        }}>
             <Grid container rowSpacing={2} sx={{
                 px: isSmall? 2: 8,
                 py: 4
