@@ -49,7 +49,7 @@ const Contents: React.FC = () => {
         <Box>
             {
                 Projects.map((project: Project) => {
-                    return (<ProjectView project={project} />)
+                    return (<ProjectView key={project.url} project={project} />)
                 })
             }
         </Box>
