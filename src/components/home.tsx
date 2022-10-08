@@ -1,9 +1,8 @@
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
 import React from 'react';
 import Contents from './contents';
 import Selfie from '../img/mypic-0.jpg';
-import { Typography } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery } from '@mui/material';
 
 const Home: React.FC = () => {
     return (
@@ -15,11 +14,13 @@ const Home: React.FC = () => {
 };
 
 function Name() {
+    const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box sx={{
             //backgroundColor: 'primary.dark',
-            py: 32,
-            px: 8,
+            py: 24,
+            px: isSmall? 2: 8,
             typography: {
                 h2: {
                     fontWeight: 400,
@@ -31,11 +32,6 @@ function Name() {
             </Typography>
             <Typography variant="h3">
                 based in bay area.
-            </Typography>
-            <Typography sx={{
-                py: 4
-            }}>
-                Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog Hoge Hoge hoge hoge Hoge Hoge hoge hog Hoge Hoge hoge hog
             </Typography>
         </Box>
     )

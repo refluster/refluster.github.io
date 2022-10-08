@@ -1,12 +1,15 @@
-import { Box, Grid, ImageList, ImageListItem, Typography } from '@mui/material';
+import { Box, Grid, ImageList, ImageListItem, Typography, useMediaQuery } from '@mui/material';
 import React, { useState } from 'react';
+import { useTheme } from '@mui/material/styles';
 import { Projects, Project } from '../projects/index';
 
 function ProjectView({project}: {project: Project}) {
+    const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box>
             <Grid container rowSpacing={2} sx={{
-                px: 16,
+                px: isSmall? 2: 8,
                 py: 4
             }}>
                 <Grid sm={6}>
