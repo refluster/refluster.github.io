@@ -12,7 +12,7 @@ function ProjectView({project}: {project: Project}) {
                 px: isSmall? 2: 8,
                 py: 4
             }}>
-                <Grid sm={6}>
+                <Grid item sm={6}>
                     <Typography variant="h2" sx={{
                     }}>
                         {project.title}
@@ -23,7 +23,7 @@ function ProjectView({project}: {project: Project}) {
                         {project.subtitle}
                     </Typography>
                 </Grid>
-                <Grid sm={6} sx={{
+                <Grid item sm={6} sx={{
                 }}>
                     <Typography variant='h5'>
                         {project.description}
