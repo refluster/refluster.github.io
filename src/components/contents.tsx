@@ -30,9 +30,14 @@ function ProjectView({project}: {project: Project}) {
                     </Typography>
                 </Grid>
             </Grid>
-            <ImageList sx={{  }} cols={3}>
+            <ImageList sx={{
+                //height: 240,
+            }} cols={3}>
                 {project.images.map((item) => (
-                    <ImageListItem key={item}>
+                    <ImageListItem key={item} sx={{
+                        height: 240,
+                        backgroundSize: 'contain'
+                    }}>
                         <img
                             src={`${item}`}
                             loading="lazy"
