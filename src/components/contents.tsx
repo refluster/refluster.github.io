@@ -8,7 +8,7 @@ function ProjectView({project}: {project: Project}) {
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box sx={{
-            py: 10,
+            py: 8,
         }}>
             <Grid container rowSpacing={2} sx={{
                 px: isSmall? 2: 8,
@@ -32,21 +32,21 @@ function ProjectView({project}: {project: Project}) {
                     </Typography>
                 </Grid>
             </Grid>
-            <ImageList sx={{
-                //height: 240,
-            }} cols={3}>
+            <Box sx={{
+                height: 540,
+                display: 'flex',
+            }}>
                 {project.images.map((item) => (
-                    <ImageListItem key={item} sx={{
-                        height: 240,
-                        backgroundSize: 'contain'
+                    <Box key={item} sx={{
+                        flex: 1,
+                        backgroundSize: 'cover',
+                        backgroundImage: `url(${item})`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: '50% 50%',
                     }}>
-                        <img
-                            src={`${item}`}
-                            loading="lazy"
-                            />
-                    </ImageListItem>
+                    </Box>
                 ))}
-            </ImageList>
+            </Box>
         </Box>
     )
 }

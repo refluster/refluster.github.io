@@ -15,6 +15,9 @@ import homexXp from './homex/homex_xp.jpeg';
 
 import dermsGi from './derms/derms_gi.jpg';
 
+import uttzs0 from './uttzs/uttzs_0.png';
+import uttzs1 from './uttzs/uttzs_1.png';
+
 export type Project = {
     title: string,
     subtitle: string,
@@ -96,7 +99,25 @@ export const Projects: Project[] = [
         images: [
             hems,
         ]
-   }, {
+    }, {
+        title: 'Uttzs',
+        subtitle: 'A platorm for enhancing the circulation across art creation and consumption.',
+        description: '',
+        url: 'https://www.uttzs.art',
+        articles: [
+            {
+                title: 'Uttzs - Ideas - Game Changer Catapult - Panasonic',
+                url: 'https://gccatapult.panasonic.com/ideas/uttzs.php',
+            }, {
+                title: 'Uttzsが変えるオンライン鑑賞体験。離れた場所でも豊かな時間を | CINRA',
+                url: 'https://www.cinra.net/article/interview-202102-tanouemasahiko_myhrt',
+            }
+        ],
+        images: [
+            uttzs0,
+            uttzs1,
+        ]
+    }, {
         title: "OND'U",
         subtitle: 'Health management software for compamnies, communities.',
         description: '',
