@@ -9,6 +9,7 @@ const Home: React.FC = () => {
         <div className="home">
             <Name />
             <Contents />
+            <Contact />
         </div>
     )
 };
@@ -32,6 +33,29 @@ function Name() {
             </Typography>
             <Typography variant="h3">
                 based in bay area.
+            </Typography>
+        </Box>
+    )
+}
+
+function Contact() {
+    const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    return (
+        <Box sx={{
+            py: 24,
+            px: isSmall? 2: 8,
+            typography: {
+                h2: {
+                    fontWeight: 400,
+                },
+            },
+        }}>
+            <Typography variant="h4">
+                Contact
+            </Typography>
+            <Typography>
+                <a href="mailto:refluster@gmail.com">refluster@gmail.com</a>
             </Typography>
         </Box>
     )

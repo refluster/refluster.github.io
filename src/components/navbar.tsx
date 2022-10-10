@@ -4,18 +4,24 @@ import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
+    const barHeight = 54;
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-            <Toolbar>
-                <Box sx={{ flexGrow: 1 }}>Koh Uehara</Box>
-                <Button color="inherit">Login</Button>
-            </Toolbar>
-            </AppBar>
-      </Box>
+            <Box sx={{
+                display: 'flex',
+                height: barHeight,
+                lineHeight: `${barHeight}px`,
+                width: '100%',
+                py: 1,
+                px: 4,
+                boxSizing: 'border-box',
+            }}>
+                <Box sx={{ 
+                    flex: 1,
+                    lineHeight: `${barHeight}px`,
+                }}>Koh Uehara</Box>
+            </Box>
     )
 };
 

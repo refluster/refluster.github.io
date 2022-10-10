@@ -36,9 +36,9 @@ export type Project = {
 
 export const Projects: Project[] = [
     {
-        title: 'Sustainable system with distributed energy resource',
-        subtitle: 'Software design for balancing the MVP launch and long term roadmap as the software architect.',
-        description: 'Experience management software for natural energy circulation.',
+        title: 'Digital platform driven by consumer side energy resource.',
+        subtitle: '',
+        description: 'Software architecting for balancing the quick launch and long term roadmap. Designed the essential structure for being driven by consumerization and network effects.',
         url: 'https://na.panasonic.com/explore/smart-mobility',
         articles: [
             {
@@ -52,9 +52,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: 'HomeX',
-        subtitle: 'Home experience platform',
-        description: 'Home experience management software.',
+        title: 'Home experience management software.',
+        subtitle: '',
+        description: 'As a initial member, contributed the concept making, software design, and launch. Introduced the essense of customer experience management software into home.',
         url: 'https://holdings.panasonic/jp/business/homex.html',
         articles: [
             {
@@ -73,9 +73,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: 'Lumix',
-        subtitle: 'Digital still camera',
-        description: 'World first 4K movie suported camera.',
+        title: 'Tech driven market creation for digital camera',
+        subtitle: '',
+        description: 'Renewed the Codec to adjust the image quality reacting to the network for remote wearable streaming solution.',
         url: 'https://na.panasonic.com/us/lumix',
         articles: [
             {
@@ -96,9 +96,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: "Home IoT",
-        subtitle: 'HEMS and home IoT system',
-        description: 'Contributed to design the end to end system and mobile app for energy management service in the residential space.',
+        title: "Home energy management system.",
+        subtitle: '',
+        description: 'Contributed to design the end to end system and mobile app for energy management service in the residential space .',
         url: 'https://www2.panasonic.biz/jp/densetsu/aiseg/serviceapp/',
         articles: [
             {
@@ -115,9 +115,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: 'Uttzs',
-        subtitle: 'A platorm for enhancing the circulation across art creation and consumption.',
-        description: '',
+        title: 'Platform briding artists and collectors',
+        subtitle: '',
+        description: 'Digital platform for helping the communication between art producer and consumer. Software architecture and DevOps by one person.',
         url: 'https://www.uttzs.art',
         articles: [
             {
@@ -136,9 +136,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: "OND'U",
-        subtitle: 'Health management software for compamnies, communities.',
-        description: '',
+        title: "Health app for managing by group",
+        subtitle: '',
+        description: 'Launched the app for supporting companies and communities to manage the personnel health. Made the concept and delivered to the market within a few months from the spreading pandemic.',
         url: 'https://tech.panasonic.com/jp/ondu/',
         articles: [
         ],
@@ -152,9 +152,9 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: "Unkai",
+        title: 'Automated indoor green system',
         subtitle: '',
-        description: 'Indoor green system for healing by nature',
+        description: 'Light and water control for maintaining the plant with RPi and GPIO control. Tablet app for showing emotional plant.',
         url: 'https://refluster.github.io/schememono/unkai.html',
         articles: [
             {

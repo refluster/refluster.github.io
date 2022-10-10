@@ -14,14 +14,16 @@ function ProjectView({project}: {project: Project}) {
                 px: isSmall? 2: 8,
                 py: 4
             }}>
-                <Grid item sm={6}>
+                <Grid item sm={6} sx={{
+                    pr: 2,
+                }}>
                     <Typography variant="h4" sx={{
-                        my: 2,
+                        my: 4,
                     }}>
                         {project.title}
                     </Typography>
                     <Typography sx={{
-                        my: 2,
+                        my: 4,
                     }}>
                         <a href={project.url}>Website</a>
                     </Typography>
