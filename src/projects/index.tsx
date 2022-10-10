@@ -3,6 +3,7 @@ import lumixA100 from './lumix/lumix-a100.png';
 import lumixGM from './lumix/lumix-gm.jpeg';
 
 import onduApp from './ondu/ondu_app.jpg';
+import onduEnterprise from './ondu/ondu_enterprise.png';
 
 import unkai from './unkai/unkai.jpg';
 import unkaiSunset from './unkai/unkai_sunset.jpg';
@@ -27,14 +28,17 @@ export type Project = {
         url: string,
         title: string,
     }[],
-    images: string[],
+    images: {
+        src: string,
+        backgroundSize?: string,
+    }[],
 };
 
 export const Projects: Project[] = [
     {
-        title: 'Software for sustainability',
-        subtitle: 'Experience management software for natural energy circulation',
-        description: 'Home experience management software.',
+        title: 'Sustainable system with distributed energy resource',
+        subtitle: 'Software design for balancing the MVP launch and long term roadmap as the software architect.',
+        description: 'Experience management software for natural energy circulation.',
         url: 'https://na.panasonic.com/explore/smart-mobility',
         articles: [
             {
@@ -43,7 +47,9 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            dermsGi,
+            {
+                src: dermsGi,
+            }
         ]
     }, {
         title: 'HomeX',
@@ -60,8 +66,11 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            homexLayer,
-            homexXp,
+            {
+                src: homexLayer,
+            }, {
+                src: homexXp,
+            }
         ]
     }, {
         title: 'Lumix',
@@ -78,9 +87,13 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            lumixGh5,
-            lumixA100,
-            lumixGM,
+            {
+                src: lumixGh5,
+            }, {
+                src: lumixA100,
+            }, {
+                src: lumixGM,
+            }
         ]
     }, {
         title: "Home IoT",
@@ -97,7 +110,9 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            hems,
+            {
+                src: hems,
+            }
         ]
     }, {
         title: 'Uttzs',
@@ -114,8 +129,11 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            uttzs0,
-            uttzs1,
+            {
+                src: uttzs0,
+            }, {
+                src: uttzs1,
+            }
         ]
     }, {
         title: "OND'U",
@@ -125,7 +143,13 @@ export const Projects: Project[] = [
         articles: [
         ],
         images: [
-            onduApp,
+            {
+                src: onduApp,
+                backgroundSize: 'contain',
+            }, {
+                src: onduEnterprise,
+                backgroundSize: 'contain',
+            }
         ]
     }, {
         title: "Unkai",
@@ -139,9 +163,13 @@ export const Projects: Project[] = [
             }
         ],
         images: [
-            unkai,
-            unkaiSunset,
-            unkaiTablet,
+            {
+                src: unkai,
+            }, {
+                src: unkaiSunset,
+            }, {
+                src: unkaiTablet,
+            }
         ]
     },
 ];

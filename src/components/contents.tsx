@@ -8,22 +8,31 @@ function ProjectView({project}: {project: Project}) {
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
     return (
         <Box sx={{
-            py: 8,
+            py: 10,
         }}>
             <Grid container rowSpacing={2} sx={{
                 px: isSmall? 2: 8,
                 py: 4
             }}>
                 <Grid item sm={6}>
-                    <Typography variant="h2" sx={{
+                    <Typography variant="h4" sx={{
+                        my: 2,
                     }}>
                         {project.title}
                     </Typography>
-                    <Typography variant="h4" sx={{
+                    <Typography sx={{
+                        my: 2,
+                    }}>
+                        <a href={project.url}>Website</a>
+                    </Typography>
+                    {/*
+                    <Typography variant="h5" sx={{
                         pr: 4,
+                        my: 2,
                     }}>
                         {project.subtitle}
                     </Typography>
+                */}
                 </Grid>
                 <Grid item sm={6} sx={{
                 }}>
@@ -33,14 +42,16 @@ function ProjectView({project}: {project: Project}) {
                 </Grid>
             </Grid>
             <Box sx={{
-                height: 540,
+                height: 420,
                 display: 'flex',
+                flexWrap: 'wrap',
             }}>
                 {project.images.map((item) => (
-                    <Box key={item} sx={{
+                    <Box key={item.src} sx={{
                         flex: 1,
-                        backgroundSize: 'cover',
-                        backgroundImage: `url(${item})`,
+                        minWidth: 180,
+                        backgroundSize: item.backgroundSize || 'cover',
+                        backgroundImage: `url(${item.src})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: '50% 50%',
                     }}>
