@@ -1,13 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.61ac7470.css",
-    "main.js": "/static/js/main.0fab097e.js",
+    "main.js": "/static/js/main.1e89b268.js",
+    "static/media/uttzs_0.png": "/static/media/uttzs_0.a44d2f165caeae2724f0.png",
+    "static/media/uttzs_1.png": "/static/media/uttzs_1.4bed94a4957da62e5f38.png",
+    "static/media/lumix-a100.png": "/static/media/lumix-a100.e286296962e3f62a214b.png",
+    "static/media/ondu_enterprise.png": "/static/media/ondu_enterprise.8535250584c7960ba286.png",
+    "static/media/derms_gi.jpg": "/static/media/derms_gi.bb87ad1f2371d0d20540.jpg",
+    "static/media/homex_layer.png": "/static/media/homex_layer.c5f2e7fe00441f78e606.png",
+    "static/media/mypic-0.jpg": "/static/media/mypic-0.0b2c98544acfdcb88de2.jpg",
+    "static/media/lumix-gh5.png": "/static/media/lumix-gh5.4fb6f06a5b924058dcb4.png",
+    "static/media/hems.png": "/static/media/hems.a9d85b9cc7cac94642a3.png",
+    "static/media/unkai_sunset.jpg": "/static/media/unkai_sunset.1a2d9d3bfcf21a06a711.jpg",
+    "static/media/lumix-gm.jpeg": "/static/media/lumix-gm.b26d2d0adf5f5afd9174.jpeg",
+    "static/media/ondu_app.jpg": "/static/media/ondu_app.597b63a288c0b4f673b1.jpg",
+    "static/media/unkai.jpg": "/static/media/unkai.04fc23456e5e9f83c319.jpg",
+    "static/media/unkai_tablet.jpg": "/static/media/unkai_tablet.e6abd2876d5806497e4d.jpg",
+    "static/media/homex_xp.jpeg": "/static/media/homex_xp.bd76d9064f3b595a9441.jpeg",
     "index.html": "/index.html",
     "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
-    "main.0fab097e.js.map": "/static/js/main.0fab097e.js.map"
+    "main.1e89b268.js.map": "/static/js/main.1e89b268.js.map"
   },
   "entrypoints": [
     "static/css/main.61ac7470.css",
-    "static/js/main.0fab097e.js"
+    "static/js/main.1e89b268.js"
   ]
 }
