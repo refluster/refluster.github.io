@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import About from './components/about';
 import Home from './components/home';
 import NavBar from './components/navbar';
 import { ThemeProvider } from '@mui/material/styles';
@@ -14,7 +13,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
         </Routes>
       </ThemeProvider>
     </div>

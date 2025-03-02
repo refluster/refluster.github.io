@@ -14,7 +14,6 @@ const Home: React.FC = () => {
     const isSmall = useMediaQuery(theme.breakpoints.down('md'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     
-    // URLハッシュに基づいて初期スクロール処理
     useEffect(() => {
         const hash = window.location.hash;
         if (hash) {
@@ -24,11 +23,11 @@ const Home: React.FC = () => {
                 if (element) {
                     const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
                     window.scrollTo({
-                        top: offsetTop - 64, // ヘッダー高さ分オフセット
+                        top: offsetTop - 64,
                         behavior: 'smooth'
                     });
                 }
-            }, 300); // ページ読み込み後に少し遅延させる
+            }, 300);
         }
     }, []);
     
@@ -52,7 +51,7 @@ const HeroSection: React.FC<{ isSmall: boolean, isMobile: boolean }> = ({ isSmal
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                minHeight: { xs: 'calc(100vh - 56px)', md: 'calc(100vh - 64px)' }, // ヘッダー高さを考慮
+                minHeight: { xs: 'calc(100vh - 56px)', md: 'calc(100vh - 64px)' },
                 borderBottom: '1px solid #eaeaea',
             }}
         >
@@ -92,7 +91,7 @@ const HeroSection: React.FC<{ isSmall: boolean, isMobile: boolean }> = ({ isSmal
                                 borderRadius: '4px',
                                 overflow: 'hidden',
                                 position: 'relative',
-                                display: { xs: 'block', md: 'block' }, // モバイルでも表示
+                                display: { xs: 'block', md: 'block' },
                             }}
                         >
                             <Box
@@ -126,7 +125,7 @@ const AboutSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolean }
                 px: { xs: 2, sm: 3, md: 4 },
                 bgcolor: '#fff',
                 borderBottom: '1px solid #eaeaea',
-                scrollMarginTop: { xs: '56px', md: '64px' }, // ヘッダー高さ分のスクロールマージン
+                scrollMarginTop: { xs: '56px', md: '64px' },
             }}
         >
             <Container maxWidth="lg" disableGutters={isMobile}>
@@ -203,7 +202,7 @@ const ProjectsSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolea
                 px: { xs: 2, sm: 3, md: 4 },
                 bgcolor: '#fafafa',
                 borderBottom: '1px solid #eaeaea',
-                scrollMarginTop: { xs: '56px', md: '64px' }, // ヘッダー高さ分のスクロールマージン
+                scrollMarginTop: { xs: '56px', md: '64px' },
             }}
         >
             <Container maxWidth="lg" disableGutters={isMobile}>
@@ -325,7 +324,7 @@ const ContactSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolean
                 py: { xs: 8, sm: 10, md: 14 }, 
                 px: { xs: 2, sm: 3, md: 4 },
                 bgcolor: '#fff',
-                scrollMarginTop: { xs: '56px', md: '64px' }, // ヘッダー高さ分のスクロールマージン
+                scrollMarginTop: { xs: '56px', md: '64px' },
             }}
         >
             <Container maxWidth="lg" disableGutters={isMobile}>
