@@ -173,10 +173,36 @@ const AboutSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolean }
 
 const SocialButton: React.FC<{ 
     Icon: React.ElementType, 
-    label: string 
-}> = ({ Icon, label }) => {
+    label: string,
+    url?: string // URLプロパティを追加
+}> = ({ Icon, label, url }) => {
+    // サービス名からデフォルトのURLを生成する関数
+    const getDefaultUrl = (service: string): string => {
+        const username = 'kohuehabra'; // デフォルトのユーザー名（実際のものに変更してください）
+        switch(service.toLowerCase()) {
+            case 'linkedin':
+                return `https://www.linkedin.com/in/koh-uehara-26986910a`;
+            case 'github':
+                return `https://github.com/refluster`;
+            case 'x':
+            case 'twitter':
+                return `https://x.com/refluster`;
+            case 'youtube':
+                return `https://www.youtube.com/@KohUehara`;
+            default:
+                return '#';
+        }
+    };
+
+    // 提供されたURLか、デフォルトのURLを使用
+    const linkUrl = url || getDefaultUrl(label);
+    
     return (
         <Button 
+            component="a"
+            href={linkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             startIcon={<Icon />}
             variant="text"
             sx={{ 
