@@ -46,7 +46,7 @@ const HeroSection: React.FC<{ isSmall: boolean, isMobile: boolean }> = ({ isSmal
         <Box 
             id="home"
             sx={{
-                py: { xs: 8, sm: 10, md: 16 },
+                py: { xs: 6, sm: 8, md: 12 },
                 px: { xs: 2, sm: 3, md: 4 },
                 display: 'flex',
                 flexDirection: 'column',
@@ -99,8 +99,8 @@ const HeroSection: React.FC<{ isSmall: boolean, isMobile: boolean }> = ({ isSmal
                                     backgroundImage: `url(${Selfie})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    width: '100%',
-                                    height: '100%',
+                                    width: '80%',
+                                    height: '80%',
                                     filter: 'grayscale(30%)',
                                     transition: 'transform 0.3s ease-in-out',
                                     '&:hover': {
