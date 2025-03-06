@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.61ac7470.css",
-    "main.js": "/static/js/main.eefb1767.js",
+    "main.js": "/static/js/main.24044283.js",
     "static/media/uttzs_0.png": "/static/media/uttzs_0.a44d2f165caeae2724f0.png",
     "static/media/uttzs_1.png": "/static/media/uttzs_1.4bed94a4957da62e5f38.png",
     "static/media/lumix-a100.png": "/static/media/lumix-a100.e286296962e3f62a214b.png",
@@ -12,6 +12,7 @@
     "static/media/hems.png": "/static/media/hems.a9d85b9cc7cac94642a3.png",
     "static/media/unkai_sunset.jpg": "/static/media/unkai_sunset.1a2d9d3bfcf21a06a711.jpg",
     "static/media/lumix-gm.jpeg": "/static/media/lumix-gm.b26d2d0adf5f5afd9174.jpeg",
+    "static/media/medicalart.jpg": "/static/media/medicalart.8c8df7ef1f42a893b8c2.jpg",
     "static/media/ondu_app.jpg": "/static/media/ondu_app.597b63a288c0b4f673b1.jpg",
     "static/media/unkai.jpg": "/static/media/unkai.04fc23456e5e9f83c319.jpg",
     "static/media/unkai_tablet.jpg": "/static/media/unkai_tablet.e6abd2876d5806497e4d.jpg",
@@ -19,10 +20,10 @@
     "static/media/mypic-0.jpg": "/static/media/mypic-0.6c2b8e8935c54830d1dd.jpg",
     "index.html": "/index.html",
     "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
-    "main.eefb1767.js.map": "/static/js/main.eefb1767.js.map"
+    "main.24044283.js.map": "/static/js/main.24044283.js.map"
   },
   "entrypoints": [
     "static/css/main.61ac7470.css",
-    "static/js/main.eefb1767.js"
+    "static/js/main.24044283.js"
   ]
 }
