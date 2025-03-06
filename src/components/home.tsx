@@ -174,11 +174,11 @@ const AboutSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolean }
 const SocialButton: React.FC<{ 
     Icon: React.ElementType, 
     label: string,
-    url?: string // URLプロパティを追加
+    url?: string
 }> = ({ Icon, label, url }) => {
-    // サービス名からデフォルトのURLを生成する関数
+
     const getDefaultUrl = (service: string): string => {
-        const username = 'kohuehabra'; // デフォルトのユーザー名（実際のものに変更してください）
+        const username = 'kohuehabra';
         switch(service.toLowerCase()) {
             case 'linkedin':
                 return `https://www.linkedin.com/in/koh-uehara-26986910a`;
@@ -194,7 +194,6 @@ const SocialButton: React.FC<{
         }
     };
 
-    // 提供されたURLか、デフォルトのURLを使用
     const linkUrl = url || getDefaultUrl(label);
     
     return (
@@ -296,6 +295,7 @@ const ProjectsSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolea
                                             fontWeight: 500,
                                             lineHeight: 1.3,
                                             fontSize: { xs: '1.2rem', sm: '1.3rem', md: '1.5rem' },
+                                            textTransform: 'capitalize',
                                         }}
                                     >
                                         {project.title}

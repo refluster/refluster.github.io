@@ -5,6 +5,8 @@ import lumixGM from './lumix/lumix-gm.jpeg';
 import onduApp from './ondu/ondu_app.jpg';
 import onduEnterprise from './ondu/ondu_enterprise.png';
 
+import medicalArt from './medicalart/medicalart.jpg';
+
 import unkai from './unkai/unkai.jpg';
 import unkaiSunset from './unkai/unkai_sunset.jpg';
 import unkaiTablet from './unkai/unkai_tablet.jpg';
@@ -133,6 +135,18 @@ export const Projects: Project[] = [
                 src: uttzs0,
             }, {
                 src: uttzs1,
+            }
+        ]
+    }, {
+        title: 'MedicalArt',
+        subtitle: '',
+        description: 'A product for better wellness with behavioral change by merging the power of art and science. Exibitted at DESIGNART Tokyo 2022.',
+        url: 'https://www.medicalart.gallery/about',
+        articles: [
+        ],
+        images: [
+            {
+                src: medicalArt,
             }
         ]
     }, {
