@@ -21,6 +21,11 @@ jobs:
     - name: Install dependencies
       run: yarn install --frozen-lockfile
       
+    - name: Set Git identity
+      run: |
+        git config --global user.email "refluster@gmail.com"
+        git config --global user.name "refluster"
+
     - name: Deploy to GitHub Pages
       run: yarn deploy
       env:
