@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.f5e707f0.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/static/css/main.61ac7470.css",
+    "main.js": "/static/js/main.2cf72d92.js",
+    "static/media/uttzs_0.png": "/static/media/uttzs_0.a44d2f165caeae2724f0.png",
+    "static/media/derms_gi.jpg": "/static/media/derms_gi.bb87ad1f2371d0d20540.jpg",
+    "static/media/homex_layer.png": "/static/media/homex_layer.c5f2e7fe00441f78e606.png",
+    "static/media/lumix-gh5.png": "/static/media/lumix-gh5.4fb6f06a5b924058dcb4.png",
+    "static/media/hems.png": "/static/media/hems.a9d85b9cc7cac94642a3.png",
+    "static/media/medicalart.jpg": "/static/media/medicalart.8c8df7ef1f42a893b8c2.jpg",
+    "static/media/ondu_app.jpg": "/static/media/ondu_app.597b63a288c0b4f673b1.jpg",
+    "static/media/unkai.jpg": "/static/media/unkai.04fc23456e5e9f83c319.jpg",
+    "static/media/mypic-0.jpg": "/static/media/mypic-0.6c2b8e8935c54830d1dd.jpg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.f5e707f0.js.map": "/static/js/main.f5e707f0.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
+    "main.2cf72d92.js.map": "/static/js/main.2cf72d92.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f5e707f0.js"
+    "static/css/main.61ac7470.css",
+    "static/js/main.2cf72d92.js"
   ]
 }
