@@ -38,7 +38,7 @@ export type Project = {
 
 export const Projects: Project[] = [
     {
-        title: 'Digital platform driven by consumer side energy resource.',
+        title: 'Climate Solution with Consumer DERMS',
         subtitle: '',
         description: 'Software architecting for balancing the quick launch and long term roadmap. Designed the essential structure for being driven by consumerization and network effects.',
         url: 'https://na.panasonic.com/explore/smart-mobility',
@@ -54,7 +54,7 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: 'Home experience management software.',
+        title: 'Home experience management software',
         subtitle: '',
         description: 'As a initial member, contributed the concept making, software design, and launch. Introduced the essense of customer experience management software into home.',
         url: 'https://holdings.panasonic/jp/business/homex.html',
@@ -98,7 +98,7 @@ export const Projects: Project[] = [
             }
         ]
     }, {
-        title: "Home energy management system.",
+        title: "Home energy management system",
         subtitle: '',
         description: 'Contributed to design the end to end system and mobile app for energy management service in the residential space .',
         url: 'https://www2.panasonic.biz/jp/densetsu/aiseg/serviceapp/',

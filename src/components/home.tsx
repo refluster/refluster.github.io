@@ -103,9 +103,9 @@ const HeroSection: React.FC<{ isSmall: boolean, isMobile: boolean }> = ({ isSmal
                                     height: '80%',
                                     filter: 'grayscale(30%)',
                                     transition: 'transform 0.3s ease-in-out',
-                                    '&:hover': {
-                                        transform: 'scale(1.03)',
-                                    },
+                                    //'&:hover': {
+                                    //    transform: 'scale(1.03)',
+                                    //},
                                 }}
                             />
                         </Box>
