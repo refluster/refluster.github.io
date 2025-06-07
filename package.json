@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b master --cname kohuehara.xyz",
+    "deploy": "gh-pages -d build -b main --cname kohuehara.xyz",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
