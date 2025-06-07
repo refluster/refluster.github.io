@@ -1,25 +1,25 @@
 import lumixGh5 from './lumix/lumix-gh5.png';
-import lumixA100 from './lumix/lumix-a100.png';
-import lumixGM from './lumix/lumix-gm.jpeg';
+//import lumixA100 from './lumix/lumix-a100.png';
+//import lumixGM from './lumix/lumix-gm.jpeg';
 
 import onduApp from './ondu/ondu_app.jpg';
-import onduEnterprise from './ondu/ondu_enterprise.png';
+//import onduEnterprise from './ondu/ondu_enterprise.png';
 
 import medicalArt from './medicalart/medicalart.jpg';
 
 import unkai from './unkai/unkai.jpg';
-import unkaiSunset from './unkai/unkai_sunset.jpg';
-import unkaiTablet from './unkai/unkai_tablet.jpg';
+//import unkaiSunset from './unkai/unkai_sunset.jpg';
+//import unkaiTablet from './unkai/unkai_tablet.jpg';
 
 import hems from './hems/hems.png';
 
 import homexLayer from './homex/homex_layer.png';
-import homexXp from './homex/homex_xp.jpeg';
+//import homexXp from './homex/homex_xp.jpeg';
 
 import dermsGi from './derms/derms_gi.jpg';
 
 import uttzs0 from './uttzs/uttzs_0.png';
-import uttzs1 from './uttzs/uttzs_1.png';
+//import uttzs1 from './uttzs/uttzs_1.png';
 
 export type Project = {
     title: string,
@@ -70,8 +70,8 @@ export const Projects: Project[] = [
         images: [
             {
                 src: homexLayer,
-            }, {
-                src: homexXp,
+            //}, {
+            //    src: homexXp,
             }
         ]
     }, {
@@ -91,10 +91,10 @@ export const Projects: Project[] = [
         images: [
             {
                 src: lumixGh5,
-            }, {
-                src: lumixA100,
-            }, {
-                src: lumixGM,
+            //}, {
+            //    src: lumixA100,
+            //}, {
+            //    src: lumixGM,
             }
         ]
     }, {
@@ -133,8 +133,8 @@ export const Projects: Project[] = [
         images: [
             {
                 src: uttzs0,
-            }, {
-                src: uttzs1,
+            //}, {
+            //    src: uttzs1,
             }
         ]
     }, {
@@ -160,9 +160,9 @@ export const Projects: Project[] = [
             {
                 src: onduApp,
                 backgroundSize: 'contain',
-            }, {
-                src: onduEnterprise,
-                backgroundSize: 'contain',
+            //}, {
+            //    src: onduEnterprise,
+            //    backgroundSize: 'contain',
             }
         ]
     }, {
@@ -179,10 +179,10 @@ export const Projects: Project[] = [
         images: [
             {
                 src: unkai,
-            }, {
-                src: unkaiSunset,
-            }, {
-                src: unkaiTablet,
+            //}, {
+            //    src: unkaiSunset,
+            //}, {
+            //    src: unkaiTablet,
             }
         ]
     },
