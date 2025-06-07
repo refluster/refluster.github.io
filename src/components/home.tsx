@@ -320,9 +320,9 @@ const ProjectsSection: React.FC<{ id: string, isSmall: boolean, isMobile: boolea
                                         rel="noopener noreferrer"
                                         variant="text"
                                         sx={{
-                                            color: '#000',
+                                            color: '#666',
                                             textTransform: 'none',
-                                            border: '1px solid #aaa',
+                                            border: '1px solid #ccc',
                                             px: { xs: 1, md: 2 },
                                             '&:hover': {
                                                 bgcolor: 'rgba(0,0,0,0.04)',
