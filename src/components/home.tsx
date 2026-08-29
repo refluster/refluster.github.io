@@ -8,6 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Projects } from '../projects/index';
+import WorkforceSection from './workforce';
 
 const Home: React.FC = () => {
     const theme = useTheme();
@@ -35,6 +36,7 @@ const Home: React.FC = () => {
         <Box sx={{ bgcolor: '#fafafa' }}>
             <HeroSection isSmall={isSmall} isMobile={isMobile} />
             <AboutSection id="about" isSmall={isSmall} isMobile={isMobile} />
+            <WorkforceSection id="agents" isSmall={isSmall} isMobile={isMobile} />
             <ProjectsSection id="projects" isSmall={isSmall} isMobile={isMobile} />
             <ContactSection id="contact" isSmall={isSmall} isMobile={isMobile} />
         </Box>

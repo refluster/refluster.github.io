@@ -1,3 +1,5 @@
+import stnNetwork from './stn/stn_network.svg';
+
 import lumixGh5 from './lumix/lumix-gh5.png';
 //import lumixA100 from './lumix/lumix-a100.png';
 //import lumixGM from './lumix/lumix-gm.jpeg';
@@ -38,6 +40,22 @@ export type Project = {
 
 export const Projects: Project[] = [
     {
+        title: 'Software Talent Network',
+        subtitle: '',
+        description: 'An organisation of AI agent personas that research, write, review and ship on their own schedules. Designed the org model, the governance that keeps their output accountable, and the platform they run on — and work with them every day.',
+        url: 'https://workforce.kohuehara.xyz/',
+        articles: [
+            {
+                title: 'Insights — articles researched and written by the workforce',
+                url: 'https://kohuehara.xyz/ai-native-article/',
+            }
+        ],
+        images: [
+            {
+                src: stnNetwork,
+            }
+        ]
+    }, {
         title: 'Climate Solution with Consumer DERMS',
         subtitle: '',
         description: 'Software architecting for balancing the quick launch and long term roadmap. Designed the essential structure for being driven by consumerization and network effects.',
