@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.61ac7470.css",
-    "main.js": "/static/js/main.2cf72d92.js",
+    "main.js": "/static/js/main.bd4210fa.js",
     "static/media/uttzs_0.png": "/static/media/uttzs_0.a44d2f165caeae2724f0.png",
     "static/media/derms_gi.jpg": "/static/media/derms_gi.bb87ad1f2371d0d20540.jpg",
     "static/media/homex_layer.png": "/static/media/homex_layer.c5f2e7fe00441f78e606.png",
@@ -11,12 +11,13 @@
     "static/media/ondu_app.jpg": "/static/media/ondu_app.597b63a288c0b4f673b1.jpg",
     "static/media/unkai.jpg": "/static/media/unkai.04fc23456e5e9f83c319.jpg",
     "static/media/mypic-0.jpg": "/static/media/mypic-0.6c2b8e8935c54830d1dd.jpg",
+    "static/media/stn_network.svg": "/static/media/stn_network.614e7e88c36394c6420abd5d32358eb2.svg",
     "index.html": "/index.html",
     "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
-    "main.2cf72d92.js.map": "/static/js/main.2cf72d92.js.map"
+    "main.bd4210fa.js.map": "/static/js/main.bd4210fa.js.map"
   },
   "entrypoints": [
     "static/css/main.61ac7470.css",
-    "static/js/main.2cf72d92.js"
+    "static/js/main.bd4210fa.js"
   ]
 }
