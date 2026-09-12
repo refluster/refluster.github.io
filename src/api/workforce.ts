@@ -37,6 +37,8 @@ export type WorkforceSummary = {
     deliverablesThisWeek: number;
     agentsActiveThisWeek: number;
     computeHoursThisMonth: number;
+    /** Most-run skills over the last seven days, busiest first. Empty on the /stats fallback. */
+    topSkills7d: { skill: string; runs: number }[];
     /** Runs per UTC day, oldest first, ending today. */
     activity30d: { date: string; runs: number }[];
     recentRuns: WorkforceRun[];
@@ -48,6 +50,7 @@ type SummaryPayload = {
     today: { runs: number };
     week: { runs: number; deliverables: number; agents_active: number };
     month: { compute_hours: number };
+    top_skills_7d?: { skill: string; runs: number }[];
     activity_30d: { date: string; runs: number }[];
     recent_runs: {
         agent: string;
@@ -93,6 +96,7 @@ function fromSummary(p: SummaryPayload): WorkforceSummary {
         deliverablesThisWeek: p.week.deliverables,
         agentsActiveThisWeek: p.week.agents_active,
         computeHoursThisMonth: p.month.compute_hours,
+        topSkills7d: p.top_skills_7d ?? [],
         activity30d: p.activity_30d,
         recentRuns: p.recent_runs.map((r) => ({
             agent: r.agent,
@@ -134,6 +138,7 @@ function fromStats(p: StatsPayload): WorkforceSummary {
         deliverablesThisWeek: runsThisWeek,
         agentsActiveThisWeek: activeIn(Math.max(0, days.length - WEEK_DAYS)),
         computeHoursThisMonth: Math.round((p.totals.compute_seconds_this_month / 3600) * 10) / 10,
+        topSkills7d: [],
         activity30d: perDay,
         recentRuns: p.recent_runs.map((r) => ({
             agent: r.slug,
