@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.61ac7470.css",
-    "main.js": "/static/js/main.bd4210fa.js",
+    "main.js": "/static/js/main.f4baef64.js",
     "static/media/uttzs_0.png": "/static/media/uttzs_0.a44d2f165caeae2724f0.png",
-    "static/media/derms_gi.jpg": "/static/media/derms_gi.bb87ad1f2371d0d20540.jpg",
-    "static/media/homex_layer.png": "/static/media/homex_layer.c5f2e7fe00441f78e606.png",
-    "static/media/lumix-gh5.png": "/static/media/lumix-gh5.4fb6f06a5b924058dcb4.png",
-    "static/media/hems.png": "/static/media/hems.a9d85b9cc7cac94642a3.png",
+    "static/media/consumer-derms-grid.jpg": "/static/media/consumer-derms-grid.97955235fd733e7ec73d.jpg",
+    "static/media/home-experience-management.jpg": "/static/media/home-experience-management.3acde00e8b14d7a40358.jpg",
     "static/media/medicalart.jpg": "/static/media/medicalart.8c8df7ef1f42a893b8c2.jpg",
+    "static/media/home-energy-system.jpg": "/static/media/home-energy-system.586c2187da84c2b4e4f5.jpg",
     "static/media/ondu_app.jpg": "/static/media/ondu_app.597b63a288c0b4f673b1.jpg",
     "static/media/unkai.jpg": "/static/media/unkai.04fc23456e5e9f83c319.jpg",
+    "static/media/camera-monochrome.jpg": "/static/media/camera-monochrome.8aa7504af3e1647146a2.jpg",
     "static/media/mypic-0.jpg": "/static/media/mypic-0.6c2b8e8935c54830d1dd.jpg",
     "static/media/stn_network.svg": "/static/media/stn_network.614e7e88c36394c6420abd5d32358eb2.svg",
     "index.html": "/index.html",
     "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
-    "main.bd4210fa.js.map": "/static/js/main.bd4210fa.js.map"
+    "main.f4baef64.js.map": "/static/js/main.f4baef64.js.map"
   },
   "entrypoints": [
     "static/css/main.61ac7470.css",
-    "static/js/main.bd4210fa.js"
+    "static/js/main.f4baef64.js"
   ]
 }
