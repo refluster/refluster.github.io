@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.61ac7470.css",
-    "main.js": "/static/js/main.e086973a.js",
+    "main.js": "/static/js/main.09d6d40a.js",
     "static/media/consumer-derms-grid.jpg": "/static/media/consumer-derms-grid.97955235fd733e7ec73d.jpg",
     "static/media/uttzs_0.jpg": "/static/media/uttzs_0.7c9caa6c78df19ca9a01.jpg",
     "static/media/home-experience-management.jpg": "/static/media/home-experience-management.3acde00e8b14d7a40358.jpg",
     "static/media/home-energy-system.jpg": "/static/media/home-energy-system.586c2187da84c2b4e4f5.jpg",
     "static/media/medicalart.jpg": "/static/media/medicalart.595a67a0f1409ddb0dfd.jpg",
     "static/media/unkai.jpg": "/static/media/unkai.51d007e3548fbc64dccc.jpg",
+    "static/media/software-talent-network.jpg": "/static/media/software-talent-network.65d1d5003fa283c92a2a.jpg",
     "static/media/ondu_app.jpg": "/static/media/ondu_app.e9c472bf220d05e44b95.jpg",
     "static/media/camera-monochrome.jpg": "/static/media/camera-monochrome.8aa7504af3e1647146a2.jpg",
     "static/media/mypic-0.jpg": "/static/media/mypic-0.6c2b8e8935c54830d1dd.jpg",
     "index.html": "/index.html",
-    "static/media/stn_network.svg": "/static/media/stn_network.614e7e88c36394c6420abd5d32358eb2.svg",
     "main.61ac7470.css.map": "/static/css/main.61ac7470.css.map",
-    "main.e086973a.js.map": "/static/js/main.e086973a.js.map"
+    "main.09d6d40a.js.map": "/static/js/main.09d6d40a.js.map"
   },
   "entrypoints": [
     "static/css/main.61ac7470.css",
-    "static/js/main.e086973a.js"
+    "static/js/main.09d6d40a.js"
   ]
 }
