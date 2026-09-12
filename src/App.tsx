@@ -1,21 +1,25 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import './App.css';
 import Home from './components/home';
 import NavBar from './components/navbar';
-import { ThemeProvider } from '@mui/material/styles';
+import Footer from './components/footer';
 import { customTheme } from './styles/theme';
 
 function App() {
   return (
-    <div className="App">
-      <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
+      <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
         </Routes>
-      </ThemeProvider>
-    </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

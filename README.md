@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# kohuehara.xyz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site of Koh Uehara, software architect. A single-page React app
+built with Create React App and Material UI, deployed to GitHub Pages at
+[kohuehara.xyz](https://kohuehara.xyz/).
 
-## Available Scripts
+## Sections
 
-In the project directory, you can run:
+- **Hero** – who I am and what I do, with links into the work and contact.
+- **About** – how I work, plus an at-a-glance facts list.
+- **Services** – the three kinds of work I take on, each tied to a project.
+- **Agents** – live figures from the AI agent workforce I run, read from
+  `workforce-api.kohuehara.xyz` at page load.
+- **Projects** – selected work with period, organisation, role, tags and press links.
+- **Contact** – email and social links.
 
-### `npm start`
+## Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn            # install
+yarn start      # dev server at http://localhost:3000
+yarn test       # jest (watch mode; CI=true yarn test --watchAll=false for one run)
+yarn build      # production bundle in build/
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Pushes to `main` build and publish the site through
+`.github/workflows/deploy.yml`.
 
-### `npm test`
+## Editing content
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Copy for the hero, about, services and contact sections lives in
+  `src/components/home.tsx`.
+- Projects are data in `src/projects/index.tsx`; images sit next to them in
+  subfolders. Keep images under ~1600 px wide and re-encode them before
+  committing.
+- Site-wide metadata (description, Open Graph, JSON-LD) is in
+  `public/index.html`; the share image is `public/og-image.png`.

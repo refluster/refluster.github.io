@@ -1,73 +1,67 @@
-import React, { useState } from 'react';
-import { AppBar, Box, Button, Container, Toolbar, Typography, useMediaQuery, Drawer, List, ListItem, IconButton, Slide } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import {
+    AppBar, Box, Button, Container, Toolbar, Typography, useMediaQuery,
+    Drawer, List, ListItem, ListItemButton, IconButton, Slide,
+} from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { ink } from '../styles/theme';
 
-// スクロール処理のためのカスタムフック
-const useScrollToElement = () => {
-    const scrollToElement = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({
-                top: offsetTop - 64, // ヘッダーの高さ分オフセット
-                behavior: 'smooth'
-            });
-        }
-    };
-    return scrollToElement;
-};
+export const NAV_ITEMS = [
+    { label: 'About', id: 'about' },
+    { label: 'Services', id: 'services' },
+    { label: 'Agents', id: 'agents' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Contact', id: 'contact' },
+];
 
-// スクロール時にヘッダーを隠すためのカスタムフック
+// Hide the bar while scrolling down, show it again on the way up.
 const useHideOnScroll = () => {
     const [visible, setVisible] = useState(true);
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-    React.useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            const isScrollingDown = prevScrollPos < currentScrollPos;
-
-            if (currentScrollPos > 100) { // 100px以上スクロールした場合のみ適用
-                setVisible(!isScrollingDown);
-            } else {
-                setVisible(true);
-            }
-
-            setPrevScrollPos(currentScrollPos);
+    useEffect(() => {
+        let prev = window.pageYOffset;
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(() => {
+                const current = window.pageYOffset;
+                setVisible(current < 100 || current < prev);
+                prev = current;
+                ticking = false;
+            });
         };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos]);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return visible;
+};
+
+// Sections carry scroll-margin-top, so a plain in-page anchor lands below the
+// bar and the URL hash stays shareable. We only add smooth scrolling on top.
+export const scrollToSection = (id: string) => {
+    const target = id === 'home' ? document.body : document.getElementById(id);
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.history.replaceState) {
+        window.history.replaceState(null, '', id === 'home' ? window.location.pathname : `#${id}`);
+    }
 };
 
 const NavBar: React.FC = () => {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('md'));
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const scrollToElement = useScrollToElement();
     const isVisible = useHideOnScroll();
 
-    const handleNavClick = (id: string) => {
-        if (id === 'home') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            scrollToElement(id);
-        }
-        if (drawerOpen) setDrawerOpen(false);
+    const handleNavClick = (event: React.MouseEvent, id: string) => {
+        event.preventDefault();
+        scrollToSection(id);
+        setDrawerOpen(false);
     };
-
-    const navItems = [
-        { label: 'Home', id: 'home' },
-        { label: 'About', id: 'about' },
-        { label: 'Agents', id: 'agents' },
-        { label: 'Projects', id: 'projects' },
-        { label: 'Contact', id: 'contact' }
-    ];
 
     return (
         <Slide appear={false} direction="down" in={isVisible}>
@@ -75,63 +69,55 @@ const NavBar: React.FC = () => {
                 position="sticky"
                 color="transparent"
                 elevation={0}
+                component="header"
                 sx={{
-                    borderBottom: '1px solid #eaeaea',
-                    backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                    backdropFilter: 'blur(5px)',
-                    height: isSmall ? '56px' : '64px', // モバイルでは高さを小さく
-                    justifyContent: 'center'
+                    borderBottom: `1px solid ${ink[100]}`,
+                    backgroundColor: 'rgba(255, 255, 255, 0.92)',
+                    backdropFilter: 'blur(6px)',
+                    height: isSmall ? 56 : 64,
+                    justifyContent: 'center',
                 }}
             >
                 <Container maxWidth="lg">
-                    <Toolbar
-                        disableGutters
-                        sx={{
-                            minHeight: isSmall ? '56px !important' : '64px',
-                            padding: 0
-                        }}
-                    >
-                        <Box sx={{
-                            flexGrow: 1,
-                            display: 'flex',
-                            alignItems: 'center'
-                        }}>
+                    <Toolbar disableGutters sx={{ minHeight: { xs: '56px !important', md: '64px' }, padding: 0 }}>
+                        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                             <Typography
                                 variant="h6"
                                 component="a"
-                                onClick={() => handleNavClick('home')}
+                                href="#home"
+                                onClick={(e: React.MouseEvent) => handleNavClick(e, 'home')}
                                 sx={{
                                     fontWeight: 500,
-                                    color: '#000',
+                                    color: ink[900],
                                     textDecoration: 'none',
-                                    cursor: 'pointer',
-                                    '&:hover': {
-                                        opacity: 0.8,
-                                    }
+                                    letterSpacing: '-0.01em',
+                                    '&:hover': { opacity: 0.8 },
                                 }}
                             >
                                 Koh Uehara
                             </Typography>
                         </Box>
 
-                        {/* デスクトップ表示のナビゲーション */}
-                        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
-                            {navItems.map((item) => (
-                                <NavLink
+                        <Box component="nav" aria-label="Sections" sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+                            {NAV_ITEMS.map((item) => (
+                                <Button
                                     key={item.id}
-                                    label={item.label}
-                                    onClick={() => handleNavClick(item.id)}
-                                />
+                                    component="a"
+                                    href={`#${item.id}`}
+                                    onClick={(e: React.MouseEvent) => handleNavClick(e, item.id)}
+                                    sx={{ fontSize: '0.95rem', fontWeight: 400, px: 1.5, py: 0.5, minWidth: 'auto' }}
+                                >
+                                    {item.label}
+                                </Button>
                             ))}
                         </Box>
 
-                        {/* モバイル表示のメニューボタン */}
                         {isSmall && (
                             <IconButton
                                 size="small"
                                 edge="end"
                                 color="inherit"
-                                aria-label="menu"
+                                aria-label="Open menu"
                                 onClick={() => setDrawerOpen(true)}
                                 sx={{ padding: 0.5 }}
                             >
@@ -141,37 +127,33 @@ const NavBar: React.FC = () => {
                     </Toolbar>
                 </Container>
 
-                {/* モバイル用のドロワーメニュー */}
-                <Drawer
-                    anchor="right"
-                    open={drawerOpen}
-                    onClose={() => setDrawerOpen(false)}
-                >
-                    <Box
-                        sx={{ width: 250 }}
-                        role="presentation"
-                    >
-                        <Box sx={{
-                            display: 'flex',
-                            justifyContent: 'space-between',
-                            alignItems: 'center',
-                            p: 2,
-                            borderBottom: '1px solid #eaeaea'
-                        }}>
+                <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+                    <Box sx={{ width: 260 }} role="presentation">
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                p: 2,
+                                borderBottom: `1px solid ${ink[100]}`,
+                            }}
+                        >
                             <Typography variant="h6">Menu</Typography>
-                            <IconButton onClick={() => setDrawerOpen(false)}>
+                            <IconButton aria-label="Close menu" onClick={() => setDrawerOpen(false)}>
                                 <CloseIcon />
                             </IconButton>
                         </Box>
-                        <List>
-                            {navItems.map((item) => (
-                                <ListItem
-                                    button
-                                    key={item.id}
-                                    onClick={() => handleNavClick(item.id)}
-                                    sx={{ py: 1.5 }}
-                                >
-                                    <Typography>{item.label}</Typography>
+                        <List component="nav" aria-label="Sections">
+                            {NAV_ITEMS.map((item) => (
+                                <ListItem key={item.id} disablePadding>
+                                    <ListItemButton
+                                        component="a"
+                                        href={`#${item.id}`}
+                                        onClick={(e: React.MouseEvent) => handleNavClick(e, item.id)}
+                                        sx={{ py: 1.5, px: 3 }}
+                                    >
+                                        <Typography>{item.label}</Typography>
+                                    </ListItemButton>
                                 </ListItem>
                             ))}
                         </List>
@@ -179,29 +161,6 @@ const NavBar: React.FC = () => {
                 </Drawer>
             </AppBar>
         </Slide>
-    );
-};
-
-const NavLink: React.FC<{ label: string; onClick: () => void }> = ({ label, onClick }) => {
-    return (
-        <Button
-            onClick={onClick}
-            sx={{
-                color: '#000',
-                textTransform: 'none',
-                fontSize: '1rem',
-                fontWeight: 400,
-                px: 1.5, // 水平方向のパディングを小さく
-                py: 0.5, // 垂直方向のパディングを小さく
-                minWidth: 'auto',
-                '&:hover': {
-                    backgroundColor: 'rgba(0, 0, 0, 0.04)',
-                    opacity: 0.9,
-                }
-            }}
-        >
-            {label}
-        </Button>
     );
 };
 
