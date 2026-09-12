@@ -1,8 +1,8 @@
 import stnNetwork from './stn/stn_network.svg';
-import dermsGi from './derms/derms_gi.jpg';
-import homexLayer from './homex/homex_layer.jpg';
-import lumixGh5 from './lumix/lumix-gh5.png';
-import hems from './hems/hems.jpg';
+import consumerDermsGrid from './derms/consumer-derms-grid.jpg';
+import homeExperienceManagement from './homex/home-experience-management.jpg';
+import cameraMonochrome from './lumix/camera-monochrome.jpg';
+import homeEnergySystem from './hems/home-energy-system.jpg';
 import uttzs0 from './uttzs/uttzs_0.jpg';
 import medicalArt from './medicalart/medicalart.jpg';
 import onduApp from './ondu/ondu_app.jpg';
@@ -70,7 +70,7 @@ export const Projects: Project[] = [
                 url: 'https://www.zawya.com/en/press-release/companies-news/panasonic-green-impact-envisions-environmental-sustainability-net-zero-climate-impact-kwhp5md7',
             },
         ],
-        image: { src: dermsGi, alt: 'Panasonic GREEN IMPACT key visual over a forest' },
+        image: { src: consumerDermsGrid, alt: 'Illustration of homes, EV chargers and substations linked to a central control platform' },
     }, {
         title: 'HomeX',
         subtitle: 'Home experience management software for the connected house',
@@ -89,7 +89,7 @@ export const Projects: Project[] = [
                 title: 'パナソニックが取り組む「ヨコパナ」の強化とは？ 未来住空間創出プロジェクト「HomeX」開始',
             },
         ],
-        image: { src: homexLayer, alt: 'Isometric diagram of the HomeX software layers over a house' },
+        image: { src: homeExperienceManagement, alt: 'Illustration of a glowing core connecting scenes of daily life at home' },
     }, {
         title: 'ondu',
         subtitle: 'Health management app for companies and communities',
@@ -149,7 +149,7 @@ export const Projects: Project[] = [
                 title: '「スマートHEMSサービスアプリ」ダウンロード開始！～家庭の電力情報を活用し家事の支援や家族の安全をサポート',
             },
         ],
-        image: { src: hems, alt: 'Smart HEMS service app on a smartphone' },
+        image: { src: homeEnergySystem, alt: 'Cutaway house wired to a smart meter, solar roof, appliances and an EV charger' },
     }, {
         title: 'Video codec for LUMIX and wearable cameras',
         subtitle: 'Technology-driven market creation for digital cameras',
@@ -168,7 +168,7 @@ export const Projects: Project[] = [
                 title: 'Panasonic’s wearable camera HX-A100 heads-on',
             },
         ],
-        image: { src: lumixGh5, alt: 'LUMIX GH5 camera body', fit: 'contain' },
+        image: { src: cameraMonochrome, alt: 'Mirrorless camera with a large lens on a dark surface' },
     }, {
         title: 'Unkai',
         subtitle: 'Automated indoor green system',
