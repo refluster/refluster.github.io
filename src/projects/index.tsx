@@ -1,4 +1,4 @@
-import stnNetwork from './stn/stn_network.svg';
+import softwareTalentNetwork from './stn/software-talent-network.jpg';
 import consumerDermsGrid from './derms/consumer-derms-grid.jpg';
 import homeExperienceManagement from './homex/home-experience-management.jpg';
 import cameraMonochrome from './lumix/camera-monochrome.jpg';
@@ -54,7 +54,7 @@ export const Projects: Project[] = [
                 url: 'https://kohuehara.xyz/ai-native-article/',
             },
         ],
-        image: { src: stnNetwork, alt: 'Network diagram of connected agent nodes' },
+        image: { src: softwareTalentNetwork, alt: 'Seven distinct expert nodes connected to a central orchestration core' },
         featured: true,
     }, {
         title: 'Consumer DERMS for EV charging',
