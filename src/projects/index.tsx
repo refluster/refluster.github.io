@@ -1,6 +1,6 @@
 import stnNetwork from './stn/stn_network.svg';
 
-import lumixGh5 from './lumix/lumix-gh5.png';
+import cameraMonochrome from './lumix/camera-monochrome.jpg';
 //import lumixA100 from './lumix/lumix-a100.png';
 //import lumixGM from './lumix/lumix-gm.jpeg';
 
@@ -13,12 +13,12 @@ import unkai from './unkai/unkai.jpg';
 //import unkaiSunset from './unkai/unkai_sunset.jpg';
 //import unkaiTablet from './unkai/unkai_tablet.jpg';
 
-import hems from './hems/hems.png';
+import homeEnergySystem from './hems/home-energy-system.jpg';
 
-import homexLayer from './homex/homex_layer.png';
+import homeExperienceManagement from './homex/home-experience-management.jpg';
 //import homexXp from './homex/homex_xp.jpeg';
 
-import dermsGi from './derms/derms_gi.jpg';
+import consumerDermGrid from './derms/consumer-derms-grid.jpg';
 
 import uttzs0 from './uttzs/uttzs_0.png';
 //import uttzs1 from './uttzs/uttzs_1.png';
@@ -68,7 +68,7 @@ export const Projects: Project[] = [
         ],
         images: [
             {
-                src: dermsGi,
+                src: consumerDermGrid,
             }
         ]
     }, {
@@ -87,7 +87,7 @@ export const Projects: Project[] = [
         ],
         images: [
             {
-                src: homexLayer,
+                src: homeExperienceManagement,
             //}, {
             //    src: homexXp,
             }
@@ -108,7 +108,7 @@ export const Projects: Project[] = [
         ],
         images: [
             {
-                src: lumixGh5,
+                src: cameraMonochrome,
             //}, {
             //    src: lumixA100,
             //}, {
@@ -131,7 +131,7 @@ export const Projects: Project[] = [
         ],
         images: [
             {
-                src: hems,
+                src: homeEnergySystem,
             }
         ]
     }, {
